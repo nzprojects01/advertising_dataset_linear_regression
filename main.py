@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 
 # Load the advertising dataset
 df = pd.read_csv("D:/linear_regression_advertising/advertising.csv")
@@ -43,4 +43,5 @@ y_pred = model.predict(X_test)
 # Check model performance
 print("R^2 score: ", r2_score(y_test, y_pred))
 print("MSE: ", mean_squared_error(y_test, y_pred))
+print("MAE: ", mean_absolute_error(y_test, y_pred))
 
